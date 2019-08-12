@@ -82,11 +82,8 @@ void Widget::changeMoney(int inputMoney)
 
 void Widget::checkMoney()
 {
-    ui->pbWater30->setEnabled(false);
-    ui->pbCoffee60->setEnabled(false);
-    ui->pbCoke150->setEnabled(false);
-
-    if(money>150) ui->pbCoke150->setEnabled(true);
-    if(money>60) ui->pbCoffee60->setEnabled(true);
-    if(money>30) ui->pbWater30->setEnabled(true);
+    ui->pbWater30->setEnabled(money>30);
+    ui->pbCoffee60->setEnabled(money>60);
+    ui->pbCoke150->setEnabled(money>150);
+    
 }
